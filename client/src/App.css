@@ -36,3 +36,115 @@
     transform: rotate(360deg);
   }
 }
+
+.loginNav{
+  float: right;
+  text-decoration: none;
+  color:black
+}
+.navsec {
+  background-color: bisque;
+}
+.secNavbar {
+
+  overflow-x: scroll;
+  display: inline;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+}
+.NavbarFix{
+ 
+  position: fixed;
+  width: 100%;
+}
+.appMain{
+  padding-top: 91px
+  
+}
+.mainHome {
+  height: 70vh;
+  background-color: black;
+  color: white;
+}
+
+.mainHome h1 {
+  margin: auto;
+}
+
+.mainHomeHtml {
+
+  height: 70vh;
+  background-color: rgb(240, 240, 139);
+}
+
+.mainHomeCss {
+  height: 70vh;
+  background-color: aqua;
+}
+
+.htmlInside {
+
+  display: flex;
+
+  width: 60%;
+  margin-left: 20%;
+  height: 70vh;
+}
+
+.leftBox {
+  text-align: center;
+  width: 40%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 60px;
+
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.rigthBox {
+
+  width: 40%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 60px;
+  margin-right: 50px;
+  background-color: rgb(185, 184, 184);
+  box-shadow: 5px 5px 5px;
+  border-radius: 5px;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+.codeInMain {
+  background-color: white;
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  height: 80%;
+  border-left: green 5px solid;
+}
+.homepage {
+  display: flex;
+}
+
+@media screen and (max-width:900px) {
+.appMain {
+    padding-top: 125px
+  }
+  .rigthBox{
+    display: none
+  }
+  .htmlInside {
+
+    display: flex;
+
+    width: 60%;
+    margin-left: 20%;
+    height: 70vh;
+  }
+}
