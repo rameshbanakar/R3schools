@@ -3,7 +3,7 @@ import SideBar from "../SideBar";
 
 function SimplePrint() {
   return (
-    <div className="flexBox">
+    <div className="flexBox" style={{ backgroundColor: "rgb(61, 64, 62)" }}>
       <div
         style={{
           width: "15%",
@@ -15,15 +15,22 @@ function SimplePrint() {
         <SideBar />
       </div>
 
-      <div className="homeDetails">
+      <div
+        className="homeDetails"
+        style={{ backgroundColor: "rgb(61, 64, 62)", color: "white" }}
+      >
+        <h2>Python Programming</h2>
         <button type="button" className="btn btn-dark">
           Previous
         </button>
-        <button type="button" className="btn btn-dark" style={{float:"right" ,marginRight:"20px"}}>
+        <button
+          type="button"
+          className="btn btn-dark"
+          style={{ float: "right", marginRight: "20px" }}
+        >
           Next
         </button>
-        <h4>Python Programming</h4>
-        <div className="card">
+        <div className="card" style={{ color: "black" }}>
           <ul>
             <li>
               <p>Python is a popular programming language.</p>
@@ -63,6 +70,16 @@ function SimplePrint() {
           In our database section you will learn how to access and work with
           MySQL and MongoDB databases:
         </p>
+        <button type="button" className="btn btn-dark">
+          Previous
+        </button>
+        <button
+          type="button"
+          className="btn btn-dark"
+          style={{ float: "right", marginRight: "20px" }}
+        >
+          Next
+        </button>
       </div>
     </div>
   );
