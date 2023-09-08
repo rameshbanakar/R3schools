@@ -1,0 +1,8 @@
+.signInPage {
+    width: 50%;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 5%;
+    box-shadow: 5px 5px 10px;
+    padding: 10px;
+}

@@ -50,6 +50,7 @@
   overflow-x: scroll;
   display: inline;
   text-decoration: none;
+  /* margin-top: 63.6px; */
   padding-left: 10px;
   padding-right: 10px;
   color: black;
@@ -100,8 +101,6 @@
   margin-bottom: 40px;
   margin-left: 40px;
   margin-right: 60px;
-
-  overflow: hidden;
   border-radius: 5px;
 }
 
@@ -147,4 +146,10 @@
     margin-left: 20%;
     height: 70vh;
   }
+}
+
+
+.flexBox{
+  display: flex;
+  
 }

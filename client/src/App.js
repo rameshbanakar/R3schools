@@ -4,6 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from './components/NavBar';
 import NavSec from './components/NavSec';
 import Home from "./components/Home"
+import SimplePrint from './components/python/SimplePrint';
+import LogIn from './components/Login';
+import SignIn from './components/SignIn';
 
 function App() {
   return (
@@ -12,10 +15,14 @@ function App() {
         <NavBar />
         <NavSec />
       </div>
+      {/* <div className="secNavbar"></div> */}
 
-      <div className="appMain ">
+      <div className="appMain">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/pyhton/simplePrint" element={<SimplePrint />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/signin" element={<SignIn />} />
         </Routes>
       </div>
     </BrowserRouter>
