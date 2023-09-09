@@ -9,6 +9,7 @@ import SimplePrint from './components/python/SimplePrint';
 import LogIn from './components/Login';
 import SignIn from './components/SignIn';
 import PythonComment from './components/python/PythonComment';
+import PythonVariable from './components/python/PythonVariable';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Python/Simpleprint" element={<SimplePrint />} />
           <Route path="/Python/Comment" element={<PythonComment />} />
+          <Route path='/Python/Variable' element={<PythonVariable/>}/>
           <Route path="/login" element={<LogIn />} />
           <Route path="/signin" element={<SignIn />} />
         </Routes>
