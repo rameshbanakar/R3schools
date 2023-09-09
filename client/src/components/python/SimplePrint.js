@@ -7,7 +7,7 @@ function SimplePrint() {
       <div
         style={{
           width: "15%",
-          "overflow-y": "scroll",
+          "overflowY": "scroll",
           height: "87.5vh",
           borderRight: "2px solid black",
         }}
@@ -51,7 +51,7 @@ function SimplePrint() {
           <a
             href="https://www.programiz.com/python-programming/online-compiler/"
             className="btn btn-primary "
-            tabindex="-1"
+            tabIndex="-1"
             role="button"
             aria-disabled="true"
             target="_blank"
