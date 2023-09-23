@@ -18,7 +18,7 @@ function Home() {
             <h3>The language for building web pages</h3>
             <br />
             <Link to="/html/simplePrint/">
-              <button type="button" class="btn btn-outline-primary">
+              <button type="button" className="btn btn-outline-primary">
                 Learn HTML
               </button>
             </Link>
@@ -42,7 +42,7 @@ function Home() {
             <h3>The language for styling web pages</h3>
             <br />
             <Link to="/css/simplePrint/">
-              <button type="button" class="btn btn-outline-primary">
+              <button type="button" className="btn btn-outline-primary">
                 Learn CSS
               </button>
             </Link>
@@ -69,7 +69,7 @@ function Home() {
             <h3>The language for programming web pages</h3>
             <br />
             <Link to="/html/simplePrint/">
-              <button type="button" class="btn btn-outline-primary">
+              <button type="button" className="btn btn-outline-primary">
                 Learn JAVASCRIPT
               </button>
             </Link>
@@ -96,7 +96,7 @@ function Home() {
             <h3>A popular programming language</h3>
             <br />
             <Link to="/pyhton/simplePrint">
-              <button type="button" class="btn btn-outline-primary">
+              <button type="button" className="btn btn-outline-primary">
                 Learn PYTHON
               </button>
             </Link>
@@ -124,7 +124,7 @@ function Home() {
             <h3>A popular programming language</h3>
             <br />
             <Link to="/c++/simplePrint">
-              <button type="button" class="btn btn-outline-primary">
+              <button type="button" className="btn btn-outline-primary">
                 Learn C++
               </button>
             </Link>
@@ -152,7 +152,7 @@ function Home() {
             <h3>A popular javascript UI library</h3>
             <br />
             <Link to="/react/simplePrint">
-              <button type="button" class="btn btn-outline-primary">
+              <button type="button" className="btn btn-outline-primary">
                 Learn React
               </button>
             </Link>
@@ -161,9 +161,7 @@ function Home() {
             <h3>React Example:</h3>
             <div className="codeInMain">
               <code>
-                function home(){
-                 console.log("hello")
-                }
+                
               </code>
             </div>
           </div>
