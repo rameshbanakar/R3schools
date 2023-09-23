@@ -19,8 +19,14 @@ const Reducer = (state = initialState, action) => {
         ...state,
         isAuthenticated:true
       }
+    case "SET_AUTH":
+      return {
+        ...state,
+        isAuthenticated:true
+      }
     case "LOG_IN_FAIL":
     case "SIGN_OUT":
+    case "SET_AUTH_FAIL":
       localStorage.removeItem("token")
       return {
         ...state,

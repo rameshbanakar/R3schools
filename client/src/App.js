@@ -1,17 +1,26 @@
-
-import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from './components/NavBar';
-import NavSec from './components/NavSec';
+import "./App.css";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import NavBar from "./components/NavBar";
+import NavSec from "./components/NavSec";
 import Home from "./components/Home";
-
-import SimplePrint from './components/python/SimplePrint';
-import LogIn from './components/Login';
-import SignIn from './components/SignIn';
-import PythonComment from './components/python/PythonComment';
-import PythonVariable from './components/python/PythonVariable';
+import SimplePrint from "./components/python/SimplePrint";
+import LogIn from "./components/Login";
+import SignIn from "./components/SignIn";
+import PythonComment from "./components/python/PythonComment";
+import PythonVariable from "./components/python/PythonVariable";
+import { setAuth } from "./components/redux/Action/AuthAct";
+import SetLoader from "./components/SetLoader";
 
 function App() {
+  const dispatch = useDispatch();
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const loader = useSelector((state) => state.loader.loading);
+  console.log("from app file -->", isAuthenticated);
+  if (localStorage.getItem("token")) {
+    localStorage.setItem("token", localStorage.getItem("token"));
+    dispatch(setAuth());
+  }
   return (
     <BrowserRouter>
       <div className="NavbarFix">
@@ -19,17 +28,52 @@ function App() {
         <NavSec />
       </div>
       {/* <div className="secNavbar"></div> */}
-
-      <div className="appMain">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Python/Simpleprint" element={<SimplePrint />} />
-          <Route path="/Python/Comment" element={<PythonComment />} />
-          <Route path='/Python/Variable' element={<PythonVariable/>}/>
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/signin" element={<SignIn />} />
-        </Routes>
-      </div>
+      {loader ? (
+        <SetLoader />
+      ) : (
+        <div className="appMain">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/Python/Simpleprint"
+              element={
+                !isAuthenticated ? (
+                  <Navigate to="/login" replace={true} />
+                ) : (
+                  <SimplePrint />
+                )
+              }
+            />
+            <Route
+              path="/Python/Comment"
+              element={
+                !isAuthenticated ? (
+                  <Navigate to="/login" replace={true} />
+                ) : (
+                  <PythonComment />
+                )
+              }
+            />
+            <Route
+              path="/Python/Variable"
+              element={
+                !isAuthenticated ? (
+                  <Navigate to="/login" replace={true} />
+                ) : (
+                  <PythonVariable />
+                )
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                isAuthenticated ? <Navigate to="/" replace={true} /> : <LogIn />
+              }
+            />
+            <Route path="/signin" element={<SignIn />} />
+          </Routes>
+        </div>
+      )}
     </BrowserRouter>
   );
 }

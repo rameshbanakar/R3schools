@@ -1,6 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { useSelector,useDispatch} from "react-redux";
+import { logOutUser } from './redux/Action/AuthAct';
 function NavBar() {
+  const isAuthenticated=useSelector(state=>state.auth.isAuthenticated)
+  const dispatch=useDispatch()
+  const logout=()=>{
+      dispatch(logOutUser())
+  }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -24,9 +31,15 @@ function NavBar() {
           </ul>
         </div>
       </div>
-      <Link className="nav-link loginNav" to="/login">
-        login
-      </Link>
+      {!isAuthenticated ? (
+        <Link className="nav-link loginNav" to="/login">
+          login
+        </Link>
+      ) : (
+        <Link className="nav-link loginNav" onClick={logout}>
+          logout
+        </Link>
+      )}
     </nav>
   );
 }

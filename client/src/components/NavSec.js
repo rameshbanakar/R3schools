@@ -9,7 +9,7 @@ function NavSec() {
       <Link to="/css/simplePrint" className="secNavbar">
         CSS
       </Link>
-      <Link to="/javascript/simplePrint" className="secNavbar">
+      <Link to="/javascript/simpleprint" className="secNavbar">
         JAVASCRIPT
       </Link>
       <Link to="/Python/Simpleprint" className="secNavbar">
