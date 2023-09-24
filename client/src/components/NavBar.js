@@ -1,13 +1,15 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector,useDispatch} from "react-redux";
-import { logOutUser } from './redux/Action/AuthAct';
+import { useSelector, useDispatch } from "react-redux";
+import { logOutUser } from "./redux/Action/AuthAct";
 function NavBar() {
-  const isAuthenticated=useSelector(state=>state.auth.isAuthenticated)
-  const dispatch=useDispatch()
-  const logout=()=>{
-      dispatch(logOutUser())
-  }
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const dispatch = useDispatch();
+  const logout = () => {
+    if (window.confirm("Are you sure to Logout?")) {
+      dispatch(logOutUser());
+    }
+  };
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -44,4 +46,4 @@ function NavBar() {
   );
 }
 
-export default NavBar
+export default NavBar;

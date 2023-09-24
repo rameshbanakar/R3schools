@@ -15,7 +15,7 @@ export const login = (data) => async (dispatch) => {
       type: "LOG_IN",
       payload: res.data.token,
     });
-    dispatch(removeLoading)
+    dispatch(removeLoading())
   } catch (error) {
     dispatch({
       type: "LOG_IN_FAIL",
