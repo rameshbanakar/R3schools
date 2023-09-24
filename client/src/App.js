@@ -70,7 +70,16 @@ function App() {
                 isAuthenticated ? <Navigate to="/" replace={true} /> : <LogIn />
               }
             />
-            <Route path="/signin" element={<SignIn />} />
+            <Route
+              path="/signin"
+              element={
+                isAuthenticated ? (
+                  <Navigate to="/" replace={true} />
+                ) : (
+                  <SignIn />
+                )
+              }
+            />
           </Routes>
         </div>
       )}
