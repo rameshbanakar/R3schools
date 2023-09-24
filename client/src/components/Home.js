@@ -151,7 +151,7 @@ function Home() {
             <br />
             <h3>A popular javascript UI library</h3>
             <br />
-            <Link to="/react/simplePrint">
+            <Link to="/react/simpleprint">
               <button type="button" className="btn btn-outline-primary">
                 Learn React
               </button>

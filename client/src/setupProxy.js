@@ -5,7 +5,7 @@ module.exports = function (app) {
     "/api",
     createProxyMiddleware({
       // 👇️ make sure to update your target
-      target: "http://localhost:5000",
+      target: "https://r3schools.onrender.com",
       changeOrigin: true,
     })
   );
