@@ -95,7 +95,7 @@ function Home() {
             <br />
             <h3>A popular programming language</h3>
             <br />
-            <Link to="/pyhton/simplePrint">
+            <Link to="/pyhton/simpleprint">
               <button type="button" className="btn btn-outline-primary">
                 Learn PYTHON
               </button>
