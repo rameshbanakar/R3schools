@@ -12,7 +12,7 @@ dotenv.config({ path: "./config/config.env" });
 connectDB()
 const app = express();
 
-app.use(cors());
+
 app.use(cookieParser());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -23,5 +23,11 @@ app.use(helmet());
 app.use(xss());
 app.use(hpp());
 app.use(express.json());
+const corsOptions = {
+  origin: "*",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 app.use("/api/auth", authRouter);
 app.listen(5000, () => console.log("server started@localhost 5000"));
