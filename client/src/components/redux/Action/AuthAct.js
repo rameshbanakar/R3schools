@@ -40,7 +40,11 @@ export const signup=(data)=>async(dispatch)=>{
         "Content-Type": "application/json",
       },
     };
-    const res=await axios.post("/api/auth/signin",data,config)
+    const res = await axios.post(
+      "https://r3schools.onrender.com/api/auth/signin",
+      data,
+      config
+    );
     console.log(res.data.token)
     dispatch({
       type:"SIGN_IN",
