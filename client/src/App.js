@@ -11,7 +11,8 @@ import PythonComment from "./components/python/PythonComment";
 import PythonVariable from "./components/python/PythonVariable";
 import { setAuth } from "./components/redux/Action/AuthAct";
 import SetLoader from "./components/SetLoader";
-
+import DataTypes from "./components/python/DataTypes";
+import Number from "./components/python/Number"
 function App() {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -61,6 +62,26 @@ function App() {
                   <Navigate to="/login" replace={true} />
                 ) : (
                   <PythonVariable />
+                )
+              }
+            />
+            <Route
+              path="/Python/DataTypes"
+              element={
+                !isAuthenticated ? (
+                  <Navigate to="/login" replace={true} />
+                ) : (
+                  <DataTypes />
+                )
+              }
+            />
+            <Route
+              path="/Python/Number"
+              element={
+                !isAuthenticated ? (
+                  <Navigate to="/login" replace={true} />
+                ) : (
+                  <Number />
                 )
               }
             />

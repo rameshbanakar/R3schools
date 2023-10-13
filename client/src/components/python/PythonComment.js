@@ -6,7 +6,7 @@ function PythonComment() {
       <div
         style={{
           width: "15%",
-          "overflowY": "scroll",
+          overflowY: "scroll",
           height: "87.5vh",
           borderRight: "2px solid black",
         }}
@@ -29,6 +29,13 @@ function PythonComment() {
         >
           Next
         </button>
+        <div
+          style={{
+            borderBottom: "1px solid white",
+            margin: "20px",
+            marginLeft: "0px",
+          }}
+        ></div>
         <div className="card" style={{ color: "black" }}>
           <ul>
             <li>
@@ -53,7 +60,7 @@ function PythonComment() {
               print("Hello, World!")
             </code>
           </div>
-         
+
           <a
             href="https://www.programiz.com/python-programming/online-compiler/"
             className="btn btn-primary "
@@ -86,6 +93,13 @@ function PythonComment() {
             Try Yourself
           </a>
         </div>
+        <div
+          style={{
+            borderBottom: "1px solid white",
+            margin: "20px",
+            marginLeft: "0px",
+          }}
+        ></div>
         <h3>Multiline Comments</h3>
         <p>Python does not really have a syntax for multiline comments.</p>
         <p>To add a multiline comment you could insert a # for each line:</p>
@@ -139,6 +153,13 @@ function PythonComment() {
           As long as the string is not assigned to a variable, Python will read
           the code, but then ignore it, and you have made a multiline comment.
         </p>
+        <div
+          style={{
+            borderBottom: "1px solid white",
+            margin: "20px",
+            marginLeft: "0px",
+          }}
+        ></div>
         <button type="button" className="btn btn-dark">
           Previous
         </button>

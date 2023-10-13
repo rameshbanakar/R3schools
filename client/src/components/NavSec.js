@@ -15,12 +15,6 @@ function NavSec() {
       <Link to="/Python/Simpleprint" className="secNavbar">
         PYTHON
       </Link>
-      <Link to="/C++/simplePrint" className="secNavbar">
-        C++
-      </Link>
-      <Link to="/react/simplePrint" className="secNavbar">
-        REACT
-      </Link>
     </div>
   );
 }

@@ -6,7 +6,7 @@ function PythonVariable() {
       <div
         style={{
           width: "15%",
-          "overflowY": "scroll",
+          overflowY: "scroll",
           height: "87.5vh",
           borderRight: "2px solid black",
         }}
@@ -29,6 +29,13 @@ function PythonVariable() {
         >
           Next
         </button>
+        <div
+          style={{
+            borderBottom: "1px solid white",
+            margin: "20px",
+            marginLeft: "0px",
+          }}
+        ></div>
         <h3>Variables</h3>
         <p>Variables are containers for storing data values.</p>
         <h3>Creating Variables</h3>
@@ -64,7 +71,8 @@ function PythonVariable() {
         <div className="codepart">
           <div className="codePartInside">
             <code>
-              x = 4 <br /> # x is of type int  <br /> x = "Sally" <br /> # x is now of type str <br />
+              x = 4 <br /> # x is of type int <br /> x = "Sally" <br /> # x is
+              now of type str <br />
               print(x)
             </code>
           </div>
@@ -79,6 +87,13 @@ function PythonVariable() {
             Try Yourself
           </a>
         </div>
+        <div
+          style={{
+            borderBottom: "1px solid white",
+            margin: "20px",
+            marginLeft: "0px",
+          }}
+        ></div>
         <button type="button" className="btn btn-dark">
           Previous
         </button>

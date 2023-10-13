@@ -6,7 +6,7 @@ function SideBar() {
     "Python Simpleprint",
     "Python Comment",
     "Python Variable",
-    "Python Data Types",
+    "Python DataTypes",
     "Python Number",
     "Python Casting",
     "Python Strings",
